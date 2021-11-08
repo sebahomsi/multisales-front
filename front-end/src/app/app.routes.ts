@@ -1,7 +1,5 @@
 import { RouterModule, Routes } from "@angular/router";
 
-const appRoute: Routes = []
-
 const appRoutes: Routes = [
 ];
 
