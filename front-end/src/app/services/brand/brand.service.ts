@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { URL_API_SERVICES } from '../config/config';
+import { URL_API_SERVICES } from '../../config/config';
 import { Observable } from 'rxjs';
 import { brand } from './brand';
 
@@ -8,7 +8,7 @@ import { brand } from './brand';
 @Injectable({
   providedIn: 'root'
 })
-export class BrandServiceService {
+export class BrandService {
 
   constructor(public http: HttpClient) { }
   private url = URL_API_SERVICES + '/brands';
