@@ -1,9 +1,11 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { Brand } from 'src/app/services/brand';
-import { BrandServiceService } from 'src/app/services/brand-service.service';
+
+import { BrandService  } from 'src/app/services/brand/brand.service';
+import { brand  } from 'src/app/services/brand/brand';
+
+
 
 @Component({
   selector: 'app-brand-create',
@@ -16,7 +18,7 @@ export class BrandCreateComponent implements OnInit {
   public showErrors: boolean = false;
 
   constructor(private formBuilder: FormBuilder,
-    private brandService: BrandServiceService,
+    private brandService: BrandService,
     private location: Location) { }
 
   ngOnInit(): void {
@@ -38,7 +40,7 @@ export class BrandCreateComponent implements OnInit {
 
     const { name } = this.form.value;
 
-    const brand = <Brand> {
+    const brand = <brand> {
       name
     };
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Brand } from 'src/app/services/brand';
-import { BrandServiceService } from 'src/app/services/brand-service.service';
+import { BrandService } from 'src/app/services/brand/brand.service';
+
 
 @Component({
   selector: 'app-brand-list',
@@ -11,7 +12,7 @@ export class BrandListComponent implements OnInit {
 
   brands: Brand[]; 
 
-  constructor(private brandService: BrandServiceService) { }
+  constructor(private brandService: BrandService) { }
 
   ngOnInit(): void {
 
