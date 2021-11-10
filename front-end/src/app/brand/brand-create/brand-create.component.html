@@ -1,0 +1,20 @@
+<h3>Create brand</h3>
+
+<div class="card p-4">
+
+    <form [formGroup]="form" (submit)="onSubmit()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name"
+                [ngClass]="{ 'is-invalid': showErrors && formControls.name.errors }" formControlName="name">
+
+            <div *ngIf="formControls.name.errors && showErrors" class="invalid-feedback">
+
+                <div *ngIf="formControls.name.errors?.required">El nombre es requerido.</div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-secondary" routerLink="/brands" >Cancel</a>
+    </form>
+
+</div>

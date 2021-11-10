@@ -1,4 +1,6 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,14 +11,20 @@ export class SidebarComponent implements OnInit {
 
   isToggleMenu: boolean = false;
   
-  constructor() {}
+  constructor(private router: Router) {
+
+  }
 
   ngOnInit(): void {
-    // this.menuItems = getAllMenuItemComponent();
+
   }
 
   public toggleMenu(): void {
     this.isToggleMenu = !this.isToggleMenu;
+  }
+
+  public gotoHome(): void {
+    this.router.navigateByUrl("/");
   }
 
 }

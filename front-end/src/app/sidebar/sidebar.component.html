@@ -2,11 +2,11 @@
     <div class="d-flex" id="wrapper">
       <!-- Sidebar-->
       <div class="border-end bg-white" id="sidebar-wrapper">
-        <div class="sidebar-heading border-bottom bg-light">Multisales</div>
+        <div class="sidebar-heading border-bottom bg-light" (click)="gotoHome()">Multisales</div>
         <div class="list-group list-group-flush">
-        
-            <!-- Items del Menu-->
-            <!-- <app-menu-container [addMenuItems]="menuItems"></app-menu-container> -->
+      
+            <a class="nav-link" routerLink="/brands">Brands</a>
+
         </div>
       </div>
       <!-- Page content wrapper-->

@@ -1,0 +1,31 @@
+<h3>Brand List</h3>
+
+<div class="d-flex flex-row-reverse">
+    <a class="btn btn-primary" routerLink="/brands/create">Nueva marca</a>
+</div>
+
+<app-generic-list [list]="brands">
+
+    <ng-container content>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let brand of brands">
+                    <td>{{brand.name}}</td>
+                    <td class="d-flex justify-content-end">
+                        <a class="btn btn-warning">Editar</a>
+                        <a class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </ng-container>
+
+</app-generic-list>
